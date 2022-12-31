@@ -13,4 +13,11 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
+
+  test 'should render a form for product' do
+    get new_product_path
+
+    assert_response :success
+    assert_select 'form'
+  end
 end

@@ -1,3 +1,7 @@
-<div class="flex-none inline-block text-2xl font-semibold">
-  Bienvenido, la fecha de hoy es: <i class="text-amber-700"><%= Date.today %></i>
+<div class="flex-none inline-block text-2xl font-medium">
+  <%= link_to products_path do %>
+    <p class="underline hover:bg-gray-100">iTems Store</p> La fecha de hoy es: <i class="text-amber-700"><%= Date.today %></i>
+  <% end %>
+
+  <%= link_to 'Crear producto', new_product_path, class: 'font-normal border-b border-cyan-400 hover:bg-cyan-200 block' %>
 </div>
