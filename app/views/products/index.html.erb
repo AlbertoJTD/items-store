@@ -1,5 +1,5 @@
 <div>
-  <h1 class="font-bold text-4xl">Products</h1>
+  <h1 class="mt-5 font-bold text-4xl">Products</h1>
   <% @products.each do |product| %>
     <%= link_to product_path(product.id) do %>
       <h2 class="text-xl"><strong class="text-cyan-500 underline"><%= product.title %></strong></h2>
