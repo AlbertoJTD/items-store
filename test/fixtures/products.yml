@@ -10,12 +10,12 @@
 #  updated_at  :datetime         not null
 #
 
-one:
-  title: MyString
-  description: MyText
-  price: 1
+ps4:
+  title: PS4 slim
+  description: New
+  price: 10000
 
-two:
-  title: MyString
-  description: MyText
-  price: 1
+macbook:
+  title: MackBook Pro 2017
+  description: Old
+  price: 8999
