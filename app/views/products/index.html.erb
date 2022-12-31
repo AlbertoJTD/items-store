@@ -1,4 +1,8 @@
 <div>
-  <h1 class="font-bold text-4xl">Products#index</h1>
-  <p>Find me in app/views/products/index.html.erb</p>
+  <h1 class="font-bold text-4xl">Products</h1>
+  <% @products.each do |product| %>
+    <h2 class="text-xl"><strong class="text-cyan-500 underline"><%= link_to product.title, product_path(product.id) %></strong></h2>
+    <p class="text-lg"><strong>Description: </strong> <%= product.description %></p>
+    <p class="text-lg border-b border-blue-200 mb-2"><strong>Price: </strong><%= product.price %></p>
+  <% end %>
 </div>
