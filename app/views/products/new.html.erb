@@ -1,6 +1,10 @@
 <h2 class="text-xl my-5">Crear producto</h2>
 
 <%= form_with model: @product do |form| %>
+  <% @product.errors.full_messages.each do |error| %>
+    <p class="block text-red-400"><%= error %></p>
+  <% end %>
+
   <%= form.label :title, 'Titulo', class: 'text-semibold block' %>
   <%= form.text_field :title %>
 

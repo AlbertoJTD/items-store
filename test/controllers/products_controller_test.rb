@@ -32,4 +32,16 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_path
   end
+
+  test 'should not create a product with empty fields' do
+    post products_path, params: {
+      product: {
+        title: '',
+        description: 'Inalambricos',
+        price: 3499
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
 end
