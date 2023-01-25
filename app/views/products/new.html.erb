@@ -1,18 +1,3 @@
 <h2 class="text-xl my-5">Crear producto</h2>
 
-<%= form_with model: @product do |form| %>
-  <% @product.errors.full_messages.each do |error| %>
-    <p class="block text-red-400"><%= error %></p>
-  <% end %>
-
-  <%= form.label :title, 'Titulo', class: 'text-semibold block' %>
-  <%= form.text_field :title %>
-
-  <%= form.label :description, 'Descripcion del producto', class: 'text-semibold block' %>
-  <%= form.text_area :description %>
-
-  <%= form.label :price, 'Precio', class: 'text-semibold block' %>
-  <%= form.number_field :price %>
-
-  <%= form.submit 'enviar', class: "block uppercase mt-6 bg-emerald-100 hover:bg-emerald-200 p-3 rounded-full cursor-pointer" %>
-<% end %>
+<%= render 'form', product: @product %>

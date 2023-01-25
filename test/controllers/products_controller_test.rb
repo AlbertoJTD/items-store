@@ -45,4 +45,34 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :unprocessable_entity
   end
+
+  test 'Should get edit view' do
+    get edit_product_path(products(:ps4))
+
+    assert_response :success
+    assert_select 'form'
+  end
+
+  test 'should update a product' do
+    patch product_path(products(:ps4)), params: {
+      product: {
+        title: 'PS4 FAT',
+        description: 'Anio 2015',
+        price: 299
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Product updated'
+  end
+
+  test "should not update a product" do
+    patch product_path(products(:ps4)), params: {
+      product: {
+        price: nil
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
 end
