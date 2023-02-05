@@ -8,8 +8,8 @@
 #  updated_at :datetime         not null
 #
 
-one:
-  name: MyString
+videogames:
+  name: Videojuegos
 
-two:
-  name: MyString
+technology:
+  name: Tecnologia

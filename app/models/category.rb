@@ -8,4 +8,5 @@
 #  updated_at :datetime         not null
 #
 class Category < ApplicationRecord
+  has_many :products, dependent: :restrict_with_exception
 end

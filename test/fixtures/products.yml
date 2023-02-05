@@ -21,10 +21,18 @@
 
 ps4:
   title: PS4 slim
-  description: New
+  description: Nueva
   price: 10000
+  category: videogames
 
 macbook:
   title: MackBook Pro 2017
-  description: Old
+  description: Antigua
   price: 8999
+  category: technology
+
+msi:
+  title: MSI GS-76
+  description: Nueva
+  price: 76000
+  category: technology
