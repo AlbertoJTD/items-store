@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 2
+    assert_select '.product', 3
   end
 
   test 'should show a product' do
@@ -26,7 +26,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: 'AirPods',
         description: 'Inalambricos',
-        price: 3499
+        price: 3499,
+        category_id: categories(:technology).id
       }
     }
 
@@ -39,7 +40,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: '',
         description: 'Inalambricos',
-        price: 3499
+        price: 3499,
+        category_id: categories(:technology).id
       }
     }
 
@@ -58,7 +60,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: 'PS4 FAT',
         description: 'Anio 2015',
-        price: 299
+        price: 299,
+        category_id: categories(:technology).id
       }
     }
 

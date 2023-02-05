@@ -2,11 +2,12 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[destroy show edit update]
 
   def index
-    @products = Product.all.with_attached_photo
+    @products = Product.all.with_attached_photo.order(created_at: :desc)
   end
 
   def new
     @product = Product.new
+    @categories = Category.all.order(name: :asc)
   end
 
   def create
@@ -21,7 +22,9 @@ class ProductsController < ApplicationController
 
   def show; end
 
-  def edit; end
+  def edit
+    @categories = Category.all.order(name: :asc)
+  end
 
   def update
     if @product.update(product_params)
@@ -44,6 +47,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:description, :price, :title, :photo)
+    params.require(:product).permit(:description, :price, :title, :photo, :category_id)
   end
 end

@@ -15,5 +15,8 @@
   <%= form.label :photo, class: 'text-semibold block' %>
   <%= form.file_field :photo %>
 
+  <%= form.label :category_id, class: 'text-semibold block' %>
+  <%= form.collection_select :category_id, @categories, :id, :name unless @categories.blank? %>  
+
   <%= form.submit 'enviar', class: "block uppercase mt-6 bg-emerald-100 hover:bg-emerald-200 p-3 rounded-full cursor-pointer" %>
 <% end %>
