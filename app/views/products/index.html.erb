@@ -1,10 +1,12 @@
-<div>
-  <h1 class="mt-5 font-bold text-4xl"><%= t('.title') %></h1>
-  <%= render partial: 'category', collection: @categories %>
-  
-  <%= link_to t('.all'), products_path, class: 'underline mx-5 text-blue-800 inline' %>
-  <div class='mt-3'>
-    <%= render partial: 'product', collection: @products %>
+<%= turbo_frame_tag 'categories' do %>
+  <div>
+    <h1 class="mt-5 font-bold text-4xl"><%= t('.title') %></h1>
+    <%= render partial: 'category', collection: @categories %>
+    
+    <%= link_to t('.all'), products_path, class: 'underline mx-5 text-blue-800 inline' %>
+    <div class='mt-3'>
+      <%= render partial: 'product', collection: @products %>
+    </div>
   </div>
-</div>
+<% end %>
 
