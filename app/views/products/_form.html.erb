@@ -3,16 +3,16 @@
     <p class="block text-red-400"><%= error %></p>
   <% end %>
 
-  <%= form.label :title, 'Titulo', class: 'text-semibold block' %>
+  <%= form.label :title, class: 'text-semibold block' %>
   <%= form.text_field :title %>
 
-  <%= form.label :description, 'Descripcion del producto', class: 'text-semibold block' %>
+  <%= form.label :description, class: 'text-semibold block' %>
   <%= form.text_area :description %>
 
-  <%= form.label :price, 'Precio', class: 'text-semibold block' %>
+  <%= form.label :price, class: 'text-semibold block' %>
   <%= form.number_field :price %>
 
-  <%= form.label :photo, 'File', class: 'text-semibold block' %>
+  <%= form.label :photo, class: 'text-semibold block' %>
   <%= form.file_field :photo %>
 
   <%= form.submit 'enviar', class: "block uppercase mt-6 bg-emerald-100 hover:bg-emerald-200 p-3 rounded-full cursor-pointer" %>

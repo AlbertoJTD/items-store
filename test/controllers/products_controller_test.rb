@@ -63,7 +63,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Product updated'
+    assert_equal flash[:notice], 'Tu producto ha sido actualizado correctamente'
   end
 
   test "should not update a product" do
@@ -82,6 +82,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Product deleted'
+    assert_equal flash[:notice], 'Tu producto ha sido eliminado correctamente'
   end
 end
