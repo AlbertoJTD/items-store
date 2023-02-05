@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[destroy show edit update]
 
   def index
-    @products = Product.all.with_attached_photo.order(created_at: :desc)
+    @products = Product.with_attached_photo.order(created_at: :desc).load_async
+    @categories = Category.order(name: :asc).load_async
   end
 
   def new
