@@ -1,6 +1,6 @@
 <div class="flex-none">
   <h1 class="text-xl inline-block"><strong class="text-cyan-500"><%= @product.title %></strong></h1>
-
+  <%= image_tag @product.photo, class: 'h-20 w-20' if @product.photo.attached?  %>
   <p class="text-lg"><strong>Description: </strong> <%= @product.description %></p>
   <span class="text-lg mb-2"><strong>Price: </strong><%= @product.price %></span>
   <%= link_to "Edit product", edit_product_path(@product), class: 'bg-yellow-100' %>

@@ -12,5 +12,8 @@
   <%= form.label :price, 'Precio', class: 'text-semibold block' %>
   <%= form.number_field :price %>
 
+  <%= form.label :photo, 'File', class: 'text-semibold block' %>
+  <%= form.file_field :photo %>
+
   <%= form.submit 'enviar', class: "block uppercase mt-6 bg-emerald-100 hover:bg-emerald-200 p-3 rounded-full cursor-pointer" %>
 <% end %>
