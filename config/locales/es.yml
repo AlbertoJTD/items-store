@@ -2,12 +2,15 @@ es:
   activerecord:
     models:
       product: Producto
+      category: Categoria
     attributes:
       product:
         title: Título
         description: Descripción
         price: Precio
         photo: Foto
+      categories:
+        name: Nombre
     errors:
       models:
         product:
@@ -21,6 +24,13 @@ es:
 
   common:
     confirm: ¿Estás seguro?
+    back: Regresar
+
+  shared:
+    header:
+      add: Crear producto
+      date: La fecha de hoy es
+
   products:
     index:
       title: Productos
@@ -28,10 +38,28 @@ es:
       title: Editar producto
     new:
       title: Crear producto
-
     create:
       created: Tu producto se ha creado correctamente
     update:
       updated: Tu producto ha sido actualizado correctamente
     destroy:
       destroyed: Tu producto ha sido eliminado correctamente
+  
+  categories:
+    category:
+      edit: Editar
+      delete: Eliminar
+      name: Nombre
+    index:
+      title: Categorias
+      new: Agregar categoria
+    edit:
+      title: Editar categoria
+    new:
+      title: Crear categoria
+    create:
+      created: La categoria se ha creado correctamente
+    update:
+      updated: La categoria ha sido actualizado correctamente
+    destroy:
+      destroyed: La categoria ha sido eliminado correctamente

@@ -1,14 +1,6 @@
 <%= form_with(model: category, class: "contents") do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
-
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <% category.errors.full_messages.each do |error| %>
+    <p class="block text-red-400"><%= error %></p>
   <% end %>
 
   <div class="my-5">

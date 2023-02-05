@@ -1,12 +1,13 @@
 <div id="<%= dom_id category %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+  <p class="my-5 inline">
+    <strong class="block font-medium mb-1"><%= t('.name') %></strong>
     <%= category.name %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this category", category, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this category', edit_category_path(category), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('.edit'), edit_category_path(category), class: 'rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium hover:bg-gray-200' %>
+    <%= link_to t('.delete'), category_path(category), class: 'rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium hover:bg-gray-200', data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} %>
     <hr class="mt-6">
+
   <% end %>
 </div>

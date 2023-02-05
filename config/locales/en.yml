@@ -33,12 +33,15 @@ en:
   activerecord:
     models:
       product: Product
+      category: Category
     attributes:
       product:
         title: Title
         description: Description
         price: Price
         photo: Photo
+      categories:
+        name: Name
     errors:
       models:
         product:
@@ -52,6 +55,14 @@ en:
 
   common:
     confirm: Are you sure?
+    back: Go back
+    name: Name
+  
+  shared:
+    header:
+      add: Create product
+      date: Today is
+  
   products:
     index:
       title: Products
@@ -59,11 +70,28 @@ en:
       title: Edit product
     new:
       title: Create product
-
     create:
       created: Your product has been successfully created
     update:
       updated: Your product has been successfully updated
     destroy:
       destroyed: Your product has been successfully deleted
+
+  categories:
+    category:
+      edit: Edit
+      delete: Delete
+    index:
+      title: Categories
+      new: Add category
+    edit:
+      title: Edit category
+    new:
+      title: Create category
+    create:
+      created: The category has been successfully created
+    update:
+      updated: The category has been successfully updated
+    destroy:
+      destroyed: The category has been successfully deleted
 
