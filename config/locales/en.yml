@@ -67,6 +67,7 @@ en:
   products:
     index:
       title: Products
+      all: All
     edit:
       title: Edit product
     new:

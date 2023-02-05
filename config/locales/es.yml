@@ -35,6 +35,7 @@ es:
   products:
     index:
       title: Productos
+      all: Todos
     edit:
       title: Editar producto
     new:
