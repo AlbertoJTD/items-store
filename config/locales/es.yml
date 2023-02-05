@@ -30,6 +30,7 @@ es:
     header:
       add: Crear producto
       date: La fecha de hoy es
+      categories: Categorias
 
   products:
     index:

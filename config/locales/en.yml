@@ -62,6 +62,7 @@ en:
     header:
       add: Create product
       date: Today is
+      categories: Categories
   
   products:
     index:
