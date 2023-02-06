@@ -36,6 +36,8 @@ es:
     index:
       title: Productos
       all: Todos
+      min_price: Precio mínimo
+      max_price: Precio máximo
     edit:
       title: Editar producto
     new:
