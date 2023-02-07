@@ -71,6 +71,10 @@ en:
       min_price: Minimum price
       max_price: Maximum price
       query_text: Find product...
+      recently: Recently
+      more_expensive: At a higher price
+      cheaper: At a lower price
+      selection: Choose a value
     edit:
       title: Edit product
     new:
