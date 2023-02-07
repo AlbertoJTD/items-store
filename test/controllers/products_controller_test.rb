@@ -23,6 +23,13 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 2
   end
 
+  test "should get items filtered name or description" do
+    get products_path(query_text: 'ps4')
+
+    assert_response :success
+    assert_select '.product', 1
+  end
+
   test 'should show a product' do
     get product_path(products(:ps4))
 
