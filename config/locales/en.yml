@@ -70,6 +70,7 @@ en:
       all: All
       min_price: Minimum price
       max_price: Maximum price
+      query_text: Find product...
     edit:
       title: Edit product
     new:

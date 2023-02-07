@@ -38,6 +38,7 @@ es:
       all: Todos
       min_price: Precio mínimo
       max_price: Precio máximo
+      query_text: Buscar producto...
     edit:
       title: Editar producto
     new:
