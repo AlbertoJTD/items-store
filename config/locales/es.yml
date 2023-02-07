@@ -39,9 +39,9 @@ es:
       min_price: Precio mínimo
       max_price: Precio máximo
       query_text: Buscar producto...
-      recently: Recientes
-      more_expensive: Más caro
-      cheaper: Más barato
+      newest: Recientes
+      expensive: Más caro
+      cheapest: Más barato
       selection: Selecciona un valor
     edit:
       title: Editar producto
