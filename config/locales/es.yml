@@ -33,6 +33,16 @@ es:
       categories: Categorias
 
   products:
+    category:
+      cars: Autos
+      sports: Deportes
+      books: Libros
+      mobile: Moviles
+      music: Musica
+      clothes: Ropa
+      perfume: Perfumeria
+      technology: Tecnologia
+      videogames: Videojuegos
     index:
       title: Productos
       all: Todos

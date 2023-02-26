@@ -65,6 +65,16 @@ en:
       categories: Categories
   
   products:
+    category:
+      cars: Cars
+      sports: Sports
+      books: Books
+      mobile: Mobile
+      music: Music
+      clothes: Clothes
+      perfume: Perfume
+      technology: Technology
+      videogames: Videogames
     index:
       title: Products
       all: All
