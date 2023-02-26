@@ -22,8 +22,9 @@ class ProductsController < ApplicationController
     end
 
     order_type = Product::ORDER_TYPE.fetch(params[:order_by]&.to_sym, Product::ORDER_TYPE[:newest])
-
     @products = @products.order(order_type).load_async
+
+    @pagy, @products = pagy_countless(@products, items: 12)
   end
 
   def new

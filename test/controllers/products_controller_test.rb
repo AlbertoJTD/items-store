@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 27
+    assert_select '.product', 12
     assert_select '.category', 10
   end
 
@@ -34,14 +34,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path(order_by: 'cheapest')
 
     assert_response :success
-    assert_select '.product', 27
+    assert_select '.product', 12
   end
 
   test "should sort products by expencive prices" do
     get products_path(order_by: 'expensive')
 
     assert_response :success
-    assert_select '.product', 27
+    assert_select '.product', 12
   end
 
   test 'should show a product' do
