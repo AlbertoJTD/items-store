@@ -30,6 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  app_name: Items Store 📦
+  description_app: Sell & buy products
   activerecord:
     models:
       product: Product

@@ -1,4 +1,6 @@
 es:
+  app_name: Vende-lo 📦
+  description_app: Compra y venta de productos
   activerecord:
     models:
       product: Producto

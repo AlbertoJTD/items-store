@@ -1,6 +1,6 @@
 <div class="flex-none inline-block text-2xl font-medium">
   <%= link_to root_path do %>
-    <p class="underline hover:bg-gray-100">iTems Store</p> <%= t('.date') %>: <i class="text-amber-700"><%= DateTime.now %></i>
+    <p class="underline hover:bg-gray-100"> <%= t('app_name') %> </p> <%= t('.date') %>: <i class="text-amber-700"><%= DateTime.now %></i>
   <% end %>
 
   <%= link_to t('.add'), new_product_path, class: 'font-normal border-b border-cyan-400 hover:bg-cyan-200 block' %>
