@@ -48,7 +48,7 @@ en:
       users:
         email: E-mail
         username: Username
-        password_digets: Password
+        password_digest: Password
     errors:
       models:
         product:

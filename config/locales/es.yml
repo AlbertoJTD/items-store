@@ -17,7 +17,7 @@ es:
       users:
         email: Correo electronico
         username: Nombre se usuario
-        password_digets: Contraseña
+        password_digest: Contraseña
     errors:
       models:
         product:
