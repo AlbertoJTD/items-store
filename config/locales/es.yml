@@ -5,6 +5,7 @@ es:
     models:
       product: Producto
       category: Categoria
+      user: Usuario
     attributes:
       product:
         title: Título
@@ -13,6 +14,10 @@ es:
         photo: Foto
       categories:
         name: Nombre
+      users:
+        email: Correo electronico
+        username: Nombre se usuario
+        password_digets: Contraseña
     errors:
       models:
         product:
@@ -84,3 +89,8 @@ es:
       updated: La categoria ha sido actualizado correctamente
     destroy:
       destroyed: La categoria ha sido eliminado correctamente
+
+  authentication:
+    users:
+      create:
+        created: Se ha registrado correctamente el usuario

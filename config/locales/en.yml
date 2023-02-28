@@ -36,6 +36,7 @@ en:
     models:
       product: Product
       category: Category
+      user: User
     attributes:
       product:
         title: Title
@@ -44,6 +45,10 @@ en:
         photo: Photo
       categories:
         name: Name
+      users:
+        email: E-mail
+        username: Username
+        password_digets: Password
     errors:
       models:
         product:
@@ -116,3 +121,7 @@ en:
     destroy:
       destroyed: The category has been successfully deleted
 
+  authentication:
+    users:
+      create:
+        created: User created successfully
