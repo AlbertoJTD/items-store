@@ -15,12 +15,17 @@
 #  index_users_on_username  (username) UNIQUE
 #
 
-one:
-  email: MyString
-  username: MyString
-  password_digets: MyString
+alberto:
+  email: test@mail.com
+  username: test
+  password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
 
-two:
-  email: MyString
-  username: MyString
-  password_digets: MyString
+fatima:
+  email: fatima@mail.com
+  username: fatima
+  password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+
+maria:
+  email: maria@mail.com
+  username: maria23
+  password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
