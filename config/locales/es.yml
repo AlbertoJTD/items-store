@@ -94,3 +94,8 @@ es:
     users:
       create:
         created: Se ha registrado correctamente el usuario
+    
+    sessions:
+      create:
+        created:  Bienvenido :)
+        failed: Inicio de sesión inválido

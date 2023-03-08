@@ -4,16 +4,10 @@ class Authentication::SessionsController < ApplicationController
   def create
     @user = User.find_by("email = :login OR username = :login", { login: params[:login] })
 
-    if @user&.authenticate(params[:password_digest])
+    if @user&.authenticate(params[:password])
       redirect_to products_path, notice: t('.created')
     else
-      redirect_to new_session_path, alert: t('.failed')
+      redirect_to categories_path, alert: t('.failed')
     end
   end
-
-  # private
-
-  # def session_params
-  #   params.require(:user).permit(:email, :username, :password_digest)
-  # end
 end
