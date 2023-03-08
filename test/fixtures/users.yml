@@ -16,7 +16,7 @@
 #
 
 alberto:
-  email: test@mail.com
+  email: alberto@mail.com
   username: test
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
 

@@ -8,7 +8,7 @@ class Authentication::UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference("User.count") do
-      post users_url, params: { user: { email: 'juan@mail.com', username: 'juanperez', password_digest: 'testme' } }
+      post users_url, params: { user: { email: 'juan@mail.com', username: 'juanperez', password: 'testme' } }
     end
 
     assert_redirected_to products_url
