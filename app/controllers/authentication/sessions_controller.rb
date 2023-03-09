@@ -10,7 +10,7 @@ class Authentication::SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to products_path, notice: t('.created')
     else
-      redirect_to categories_path, alert: t('.failed')
+      redirect_to new_session_path, alert: t('.failed')
     end
   end
 end
