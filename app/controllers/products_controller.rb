@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  skip_before_action :protect_pages, only: %i[index show]
   before_action :set_product, only: %i[destroy show edit update]
+  skip_before_action :protect_pages, only: %i[index show]
 
   def index
     @categories = Category.order(name: :asc).load_async
