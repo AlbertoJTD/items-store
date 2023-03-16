@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  admin           :boolean          default(FALSE)
 #  email           :string           not null
 #  password_digest :string           not null
 #  username        :string           not null
@@ -19,6 +20,7 @@ alberto:
   email: alberto@mail.com
   username: test
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: true
 
 fatima:
   email: fatima@mail.com
