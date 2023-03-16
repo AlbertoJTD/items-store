@@ -43,22 +43,12 @@ en:
         description: Description
         price: Price
         photo: Photo
-      categories:
+      category:
         name: Name
       users:
         email: E-mail
         username: Username
         password_digest: Password
-    errors:
-      models:
-        product:
-          attributes:
-            price:
-              blank: must not be empty
-            description:
-              blank: must not be empty
-            title:
-              blank: must not be empty
 
   common:
     confirm: Are you sure?
@@ -70,6 +60,9 @@ en:
       add: Create product
       date: Today is
       categories: Categories
+      login: Login
+      sign_up: Sign up
+      logout: Logout
   
   products:
     category:
@@ -125,8 +118,10 @@ en:
     users:
       create:
         created: User created successfully
-    
+
     sessions:
       create:
         created:  Welcome :)
         failed: Invalid login
+      destroy:
+        destroyed: Session ended, hope to see you soon :)

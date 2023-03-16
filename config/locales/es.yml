@@ -12,22 +12,12 @@ es:
         description: Descripción
         price: Precio
         photo: Foto
-      categories:
+      category:
         name: Nombre
       users:
         email: Correo electronico
         username: Nombre se usuario
         password_digest: Contraseña
-    errors:
-      models:
-        product:
-          attributes:
-            price:
-              blank: no debe estar vacío
-            description:
-              blank: no debe estar vacío
-            title:
-              blank: no debe estar vacío
 
   common:
     confirm: ¿Estás seguro?
@@ -39,6 +29,9 @@ es:
       add: Crear producto
       date: La fecha de hoy es
       categories: Categorias
+      login: Iniciar sesión
+      sign_up: Registrarse
+      logout: Cerrar sesión
 
   products:
     category:
@@ -100,3 +93,5 @@ es:
       create:
         created:  Bienvenido :)
         failed: Inicio de sesión inválido
+      destroy:
+        destroyed: Sesión finalizada, espero verte pronto :)

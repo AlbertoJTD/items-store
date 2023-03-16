@@ -8,4 +8,6 @@
 
   <%= link_to t('.login'), new_session_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block underline' unless Current.user  %>
   <%= link_to t('.sign_up'), new_user_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block underline' unless Current.user  %>
+
+  <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} , class: 'font-normal border-b border-cyan-400 hover:bg-red-200 block underline' if Current.user %>
 </div>
