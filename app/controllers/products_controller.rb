@@ -53,6 +53,6 @@ class ProductsController < ApplicationController
   end
 
   def search_products_params
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
   end
 end
