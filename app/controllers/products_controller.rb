@@ -25,10 +25,12 @@ class ProductsController < ApplicationController
   def show; end
 
   def edit
+    authorize!(@product)
     @categories = Category.all.order(name: :asc)
   end
 
   def update
+    authorize!(@product)
     if @product.update(product_params)
       redirect_to products_path, notice: t('.updated')
     else
@@ -37,6 +39,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    authorize!(@product)
     @product.destroy
 
     redirect_to products_path, notice: t('.destroyed')
