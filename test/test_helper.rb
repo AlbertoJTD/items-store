@@ -15,7 +15,7 @@ module ActiveSupport
     # Add more helper methods to be used by all tests here...
 
     def login
-      post sessions_path, params: { login: 'fatima@mail.com', password: 'testme' }
+      post sessions_path, params: { login: 'alberto@mail.com', password: 'testme' }
     end
   end
 end
