@@ -4,6 +4,6 @@
   <p class="text-lg"><strong>Description: </strong> <%= @product.description %></p>
   <span class="text-lg mb-2"><strong>Price: </strong><%= @product.price %></span>
 
-  <%= link_to "Edit product", edit_product_path(@product), class: 'bg-yellow-100' if @product.user.eql?(Current.user) %>
-  <%= link_to 'Eliminar producto', product_path(@product), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, class: 'bg-red-100' if @product.user.eql?(Current.user) %>
+  <%= link_to "Edit product", edit_product_path(@product), class: 'bg-yellow-100' if @product.owner? %>
+  <%= link_to 'Eliminar producto', product_path(@product), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, class: 'bg-red-100' if @product.owner? %>
 </div>

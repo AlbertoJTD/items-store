@@ -40,4 +40,8 @@ class User < ApplicationRecord
     self.username = username.downcase
     self.email = email.downcase
   end
+
+  def owner?
+    user_id.eql?(Current.user.id)
+  end
 end
