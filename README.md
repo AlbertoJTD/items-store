@@ -27,7 +27,7 @@ rails db:create db:migrate
 bundle install
 ```
 
-3. _(Optional)_ If you would like to load the data from the fixtures, use the following comman
+3. _(Optional)_ If you want to load the fixture data, use the following command
 ```ruby
 rails db:fixtures:load
 ```
