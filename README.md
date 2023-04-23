@@ -1,6 +1,6 @@
 # The pragmatic bookshelf 📚
 
-This is an application where you can upload your second-hand items
+This is an application where you can upload your books
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/89556233/233820005-e2d690f2-351a-4ae4-a16f-bd644e0a0923.png" width="900" height="540" style="text-align:center;">
