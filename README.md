@@ -3,7 +3,7 @@
 This is an application where you can upload your second-hand items
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/89556233/233819108-b77a2830-1ba3-4e61-8116-754d0664a6ba.png" width="1000" height="655" style="text-align:center;">
+  <img src="https://user-images.githubusercontent.com/89556233/233819108-b77a2830-1ba3-4e61-8116-754d0664a6ba.png" width="1000" height="550" style="text-align:center;">
 </p>
 
 
