@@ -1,4 +1,4 @@
-# Items store 
+# Items store 🛍️
 
 This is an application where you can upload your second-hand items
 
@@ -7,7 +7,7 @@ This is an application where you can upload your second-hand items
 </p>
 
 
-## Minimum requirements🛍️
+## Minimum requirements
 - Ruby 3.2.1
 - Rails 7.0.4
 
