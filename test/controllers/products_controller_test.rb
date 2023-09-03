@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     login
   end
 
-  test "should get index" do
+  test 'should get index' do
     get products_path
 
     assert_response :success
@@ -13,35 +13,35 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.category', 10
   end
 
-  test "should get products by category" do
+  test 'should get products by category' do
     get products_path(category_id: categories(:technology).id)
 
     assert_response :success
     assert_select '.product', 7
   end
 
-  test "should get products filtered by min & max price" do
+  test 'should get products filtered by min & max price' do
     get products_path(min_price: 5000, max_price: 11000)
 
     assert_response :success
     assert_select '.product', 3
   end
 
-  test "should get products filtered name or description" do
+  test 'should get products filtered name or description' do
     get products_path(query_text: 'ps4')
 
     assert_response :success
     assert_select '.product', 1
   end
 
-  test "should sort products by cheapest price" do
+  test 'should sort products by cheapest price' do
     get products_path(order_by: 'cheapest')
 
     assert_response :success
     assert_select '.product', 12
   end
 
-  test "should sort products by expencive prices" do
+  test 'should sort products by expencive prices' do
     get products_path(order_by: 'expensive')
 
     assert_response :success
@@ -109,7 +109,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'Tu producto ha sido actualizado correctamente'
   end
 
-  test "should not update a product" do
+  test 'should not update a product' do
     patch product_path(products(:ps4)), params: {
       product: {
         price: nil
