@@ -14,8 +14,8 @@ class SearchProducts
 
     sort(scoped, params[:order_by])
   end
-  
-  private 
+
+  private
 
   def initial_scope
     Product.with_attached_photo
