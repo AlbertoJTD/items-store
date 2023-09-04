@@ -5,7 +5,7 @@ module Language
     around_action :switch_locale
 
     private
-    
+
     def switch_locale(&action)
       I18n.with_locale(locale_from_header, &action)
     end

@@ -7,7 +7,7 @@
       <%= form.number_field :min_price, class: 'rounded-lg bg-gray-100 border-blue-500', placeholder: t('.min_price'), onchange: 'this.form.requestSubmit()', value: params[:min_price] %>
       <%= form.number_field :max_price, class: 'rounded-lg bg-gray-100 border-blue-500', placeholder: t('.max_price'), onchange: 'this.form.requestSubmit()', value: params[:max_price] %>
       <%= form.select :order_by, options_for_select(
-        Product::ORDER_TYPE.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]),
+        Product::ORDER_TYPE.keys.each { |order| [t(".#{order}"), order] }, params[:order_by]),
         { include_blank: t('.selection')}, { class: 'rounded-lg', onchange: 'this.form.requestSubmit()', value: params[:max_price] } %>
     <% end %>
 
