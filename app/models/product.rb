@@ -32,7 +32,7 @@ class Product < ApplicationRecord
     newest: 'created_at DESC',
     expensive: 'price DESC',
     cheapest: 'price ASC'
-  }
+  }.freeze
 
   has_one_attached :photo
 
