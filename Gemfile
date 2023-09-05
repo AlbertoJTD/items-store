@@ -52,6 +52,9 @@ gem "pg_search", "~> 2.3"
 # Pagination
 gem "pagy", "~> 6.0"
 
+# Debug app
+gem "pry", "~> 0.14.2"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -82,3 +85,4 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
