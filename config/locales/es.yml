@@ -24,6 +24,7 @@ es:
     back: Regresar
     not_logged_in: Tienes que iniciar sesión o crear una cuenta
     not_authorized: No tienes permiso para esta acción
+    user_not_found: El usuario que busca no existe
 
   shared:
     header:

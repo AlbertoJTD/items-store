@@ -25,7 +25,7 @@ module ItemsStore
     config.i18n.available_locales = [:en, :es]
 
     # Default language
-    config.i18n.default_locale = :es
+    config.i18n.default_locale = :en
 
     # Allow multiquery
     config.active_record.async_query_executor = :global_thread_pool
