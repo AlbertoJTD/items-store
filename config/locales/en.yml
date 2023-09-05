@@ -91,6 +91,8 @@ en:
       title: Edit product
     new:
       title: Create product
+    show:
+      view_more_products: See moore products of %{username}
     create:
       created: Your product has been successfully created
     update:

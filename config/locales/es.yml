@@ -60,6 +60,8 @@ es:
       title: Editar producto
     new:
       title: Crear producto
+    show:
+      view_more_products: Ver mas productos de %{username}
     create:
       created: Tu producto se ha creado correctamente
     update:
