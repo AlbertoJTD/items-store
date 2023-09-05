@@ -27,6 +27,6 @@ class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
     delete session_url(@user.id)
 
     assert_redirected_to products_url
-    assert_equal flash[:notice], 'Sesión finalizada, espero verte pronto :)'
+    assert_equal flash[:notice], 'Session ended, hope to see you soon :)'
   end
 end
