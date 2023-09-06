@@ -20,7 +20,7 @@
 #  fk_rails_...  (user_id => users.id)
 #
 
-alberto_ps4:
+alberto_nvidia:
   user: alberto
   product: nvidia
 
