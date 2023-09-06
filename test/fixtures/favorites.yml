@@ -20,10 +20,10 @@
 #  fk_rails_...  (user_id => users.id)
 #
 
-one:
-  user: one
-  product: one
+alberto_ps4:
+  user: alberto
+  product: nvidia
 
-two:
-  user: two
-  product: two
+fatima_gameboy:
+  user: fatima
+  product: gameboy
