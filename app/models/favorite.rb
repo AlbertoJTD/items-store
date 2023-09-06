@@ -20,6 +20,8 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Favorite < ApplicationRecord
+  validates :user, uniqueness: { scope: :product }
+
   belongs_to :user
   belongs_to :product
 end
