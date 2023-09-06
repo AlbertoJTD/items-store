@@ -34,6 +34,7 @@ es:
       login: Iniciar sesión
       sign_up: Registrarse
       logout: Cerrar sesión
+      favorites: Favoritos
 
   products:
     category:
@@ -87,6 +88,10 @@ es:
       updated: La categoria ha sido actualizado correctamente
     destroy:
       destroyed: La categoria ha sido eliminado correctamente
+
+  favorites:
+    index:
+      title: Mis favoritos
 
   authentication:
     users:
