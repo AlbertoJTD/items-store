@@ -1,9 +1,9 @@
 <div class="flex-none inline-block text-2xl font-medium relative sticky top-0 bg-white w-full pb-5">
   <%= link_to root_path do %>
-    <p class="hover:underline"> <%= t('app_name') %> </p>
+    <p class="hover:underline text-2xl font-bold text-teal-500"> <%= t('app_name') %> </p>
   <% end %>
 
-  <div class="mt-5 flex items-center justify-start space-x-4">
+  <div class="mt-5 flex-none sm:flex items-center justify-start space-x-0 sm:space-x-4">
     <%= link_to t('.add'), new_product_path, class: 'font-normal border-b border-cyan-400 hover:bg-cyan-200 block rounded-md px-2' if Current.user %>
     <%= link_to t('.categories'), categories_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2' if Current.user&.admin?  %>
     <%= link_to t('.favorites'), favorites_path, class: 'font-normal border-b border-cyan-400 hover:bg-purple-200 block rounded-md px-2'  %>

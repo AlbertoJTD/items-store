@@ -1,26 +1,31 @@
 <%= turbo_frame_tag 'home' do %>
   <div>
-    <h1 class="font-bold text-4xl"><%= t('.title') %></h1>
-    
+    <h1 class="font-bold text-4xl bg-"><%= t('.title') %></h1>
+
     <%= form_with url: products_path, class: 'my-5', method: :get do |form| %>
-      <%= form.text_field :query_text, class: 'rounded-lg', placeholder: t('.query_text'), onchange: 'this.form.requestSubmit()', value: params[:query_text]  %>
-      <%= form.number_field :min_price, class: 'rounded-lg bg-gray-100 border-blue-500', placeholder: t('.min_price'), onchange: 'this.form.requestSubmit()', value: params[:min_price] %>
-      <%= form.number_field :max_price, class: 'rounded-lg bg-gray-100 border-blue-500', placeholder: t('.max_price'), onchange: 'this.form.requestSubmit()', value: params[:max_price] %>
-      <%= form.select :order_by, options_for_select(
-        Product::ORDER_TYPE.keys.each { |order| [t(".#{order}"), order] }, params[:order_by]),
-        { include_blank: t('.selection')}, { class: 'rounded-lg', onchange: 'this.form.requestSubmit()', value: params[:max_price] } %>
+      <%= form.text_field :query_text, class: 'rounded-2xl w-full border border-gray-300', placeholder: t('.query_text'), onchange: 'this.form.requestSubmit()', value: params[:query_text] %>
+
+      <div class="flex mt-2">
+        <%= form.number_field :min_price, class: 'rounded-lg w-1/3 border border-gray-300', placeholder: t('.min_price'), onchange: 'this.form.requestSubmit()', value: params[:min_price] %>
+        <%= form.number_field :max_price, class: 'rounded-lg w-1/3 border border-gray-300 mx-2', placeholder: t('.max_price'), onchange: 'this.form.requestSubmit()', value: params[:max_price] %>
+        <%= form.select :order_by, options_for_select(
+          Product::ORDER_TYPE.keys.each { |order| [t(".#{order}"), order] }, params[:order_by]),
+          { include_blank: t('.selection')}, { class: 'rounded-lg w-1/3 border border-gray-300', onchange: 'this.form.requestSubmit()', value: params[:max_price] } %>
+      </div>
     <% end %>
 
-    <%= render partial: 'category', collection: @categories %>
-    
-    <%= link_to t('.all'), products_path, class: 'underline mx-5 text-blue-800 inline' %>
-    
+    <div class="flex mb-5 overflow-x-auto space-x-2">
+      <%= link_to t('.all'), products_path, class: 'px-2 py-1 rounded-full bg-cyan-100 hover:bg-cyan-200' %>
+      <%# <div class="space-x-2"> %>
+        <%= render partial: 'category', collection: @categories %>
+      <%# </div> %>
+    </div>
+
     <%= turbo_frame_tag :products do %>
-      <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products mt-3' do %>
+      <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products mt-3 flex flex-col w-full' do %>
         <%= render partial: 'product', collection: @products %>
-        <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+        <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products mt-3 flex flex-col w-full', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
       <% end %>
     <% end %>
   </div>
 <% end %>
-
