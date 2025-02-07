@@ -1,4 +1,4 @@
-<%= link_to product_path(product.id), class: 'product pb-2 border-b border-b-blue-200', 'data-turbo-frame': '_top' do %>
+<%= link_to product_path(product.id), class: 'product pb-2 border-b border-b-blue-200 sm:w-[calc(33.33333%_-_.5rem)] sm:w-[calc(25%_-_.5rem)]', 'data-turbo-frame': '_top' do %>
   <%= image_tag product.photo, width: 100 if product.photo.attached? %>
   <div class="m-2">
     <h2 class="text-xl"><strong class="text-cyan-500 underline"><%= product.title %></strong></h2>

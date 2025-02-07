@@ -3,14 +3,14 @@
     <h1 class="font-bold text-4xl bg-"><%= t('.title') %></h1>
 
     <%= form_with url: products_path, class: 'my-5', method: :get do |form| %>
-      <%= form.text_field :query_text, class: 'rounded-2xl w-full border border-gray-300', placeholder: t('.query_text'), onchange: 'this.form.requestSubmit()', value: params[:query_text] %>
+      <%= form.text_field :query_text, class: 'rounded-2xl w-full border border-gray-300 text-gray-500', placeholder: t('.query_text'), onchange: 'this.form.requestSubmit()', value: params[:query_text] %>
 
       <div class="flex mt-2">
-        <%= form.number_field :min_price, class: 'rounded-lg w-1/3 border border-gray-300', placeholder: t('.min_price'), onchange: 'this.form.requestSubmit()', value: params[:min_price] %>
-        <%= form.number_field :max_price, class: 'rounded-lg w-1/3 border border-gray-300 mx-2', placeholder: t('.max_price'), onchange: 'this.form.requestSubmit()', value: params[:max_price] %>
+        <%= form.number_field :min_price, class: 'rounded-lg w-1/3 border border-gray-300 text-gray-500', placeholder: t('.min_price'), onchange: 'this.form.requestSubmit()', value: params[:min_price] %>
+        <%= form.number_field :max_price, class: 'rounded-lg w-1/3 border border-gray-300 text-gray-500 mx-2', placeholder: t('.max_price'), onchange: 'this.form.requestSubmit()', value: params[:max_price] %>
         <%= form.select :order_by, options_for_select(
           Product::ORDER_TYPE.keys.each { |order| [t(".#{order}"), order] }, params[:order_by]),
-          { include_blank: t('.selection')}, { class: 'rounded-lg w-1/3 border border-gray-300', onchange: 'this.form.requestSubmit()', value: params[:max_price] } %>
+          { include_blank: t('.selection')}, { class: 'rounded-lg w-1/3 border border-gray-300 text-gray-500', onchange: 'this.form.requestSubmit()', value: params[:max_price] } %>
       </div>
     <% end %>
 
@@ -22,9 +22,9 @@
     </div>
 
     <%= turbo_frame_tag :products do %>
-      <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products mt-3 flex flex-col w-full' do %>
+      <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products mt-3 flex flex-col sm:flex-row sm:flex-wrap w-full' do %>
         <%= render partial: 'product', collection: @products %>
-        <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products mt-3 flex flex-col w-full', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+        <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products mt-3 flex flex-col sm:flex-row sm:flex-wrap w-full', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
       <% end %>
     <% end %>
   </div>
