@@ -1,16 +1,20 @@
-<div class="flex-none inline-block text-2xl font-medium relative sticky top-0 bg-white w-full pb-5">
+<div data-controller="menu" class="flex justify-between inline-block text-2xl font-medium  bg-white w-full pb-5">
   <%= link_to root_path do %>
     <p class="hover:underline text-2xl font-bold text-teal-500"> <%= t('app_name') %> </p>
   <% end %>
 
-  <div class="mt-5 flex-none sm:flex items-center justify-start space-x-0 sm:space-x-4">
-    <%= link_to t('.add'), new_product_path, class: 'font-normal border-b border-cyan-400 hover:bg-cyan-200 block rounded-md px-2' if Current.user %>
-    <%= link_to t('.categories'), categories_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2' if Current.user&.admin?  %>
-    <%= link_to t('.favorites'), favorites_path, class: 'font-normal border-b border-cyan-400 hover:bg-purple-200 block rounded-md px-2'  %>
+  <button class="sm:hidden" data-action="click->menu#toggle">
+    <%= image_tag 'icons/menu.svg', width: 35, height: 35 %>
+  </button>
 
-    <%= link_to t('.login'), new_session_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2 underline' unless Current.user  %>
-    <%= link_to t('.sign_up'), new_user_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2 underline' unless Current.user  %>
+  <%# Desktop links %>
+  <div class="mt-5 flex-none sm:flex items-center justify-start space-x-0 sm:space-x-4 hidden sm:block">
+    <%= render partial: 'shared/items' %>
+  </div>
 
-    <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} , class: 'font-normal border-b border-cyan-400 hover:bg-red-200 block rounded-md px-2' if Current.user %>
+  <%# Mobile links %>
+  <div data-menu-target="items" class="gap-4 sm:hidden absolute top-0 right-0 bg-gray-100 shadow z-10 h-full flex flex-col min-w-[45%] overflow-y-auto ease-in-out duration-200 p-5 translate-x-full">
+    <button data-action="click->menu#toggle" class="mb-4"><%= image_tag 'icons/close.svg', width: 35, height: 35 %></button>
+    <%= render partial: 'shared/items' %>
   </div>
 </div>
