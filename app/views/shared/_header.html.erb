@@ -1,14 +1,16 @@
-<div class="flex-none inline-block text-2xl font-medium">
+<div class="flex-none inline-block text-2xl font-medium relative sticky top-0 bg-white w-full pb-5">
   <%= link_to root_path do %>
-    <p class="underline hover:bg-gray-100"> <%= t('app_name') %> </p> <%= t('.date') %>: <i class="text-amber-700"><%= DateTime.now %></i>
+    <p class="hover:underline"> <%= t('app_name') %> </p>
   <% end %>
 
-  <%= link_to t('.add'), new_product_path, class: 'font-normal border-b border-cyan-400 hover:bg-cyan-200 block' if Current.user %>
-  <%= link_to t('.categories'), categories_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block' if Current.user&.admin?  %>
-  <%= link_to t('.favorites'), favorites_path, class: 'font-normal border-b border-cyan-400 hover:bg-purple-200 block'  %>
+  <div class="mt-5 flex items-center justify-start space-x-4">
+    <%= link_to t('.add'), new_product_path, class: 'font-normal border-b border-cyan-400 hover:bg-cyan-200 block rounded-md px-2' if Current.user %>
+    <%= link_to t('.categories'), categories_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2' if Current.user&.admin?  %>
+    <%= link_to t('.favorites'), favorites_path, class: 'font-normal border-b border-cyan-400 hover:bg-purple-200 block rounded-md px-2'  %>
 
-  <%= link_to t('.login'), new_session_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block underline' unless Current.user  %>
-  <%= link_to t('.sign_up'), new_user_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block underline' unless Current.user  %>
+    <%= link_to t('.login'), new_session_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2 underline' unless Current.user  %>
+    <%= link_to t('.sign_up'), new_user_path, class: 'font-normal border-b border-cyan-400 hover:bg-teal-200 block rounded-md px-2 underline' unless Current.user  %>
 
-  <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} , class: 'font-normal border-b border-cyan-400 hover:bg-red-200 block underline' if Current.user %>
+    <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} , class: 'font-normal border-b border-cyan-400 hover:bg-red-200 block rounded-md px-2' if Current.user %>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 <%= turbo_frame_tag 'home' do %>
   <div>
-    <h1 class="mt-5 font-bold text-4xl"><%= t('.title') %></h1>
+    <h1 class="font-bold text-4xl"><%= t('.title') %></h1>
     
     <%= form_with url: products_path, class: 'my-5', method: :get do |form| %>
       <%= form.text_field :query_text, class: 'rounded-lg', placeholder: t('.query_text'), onchange: 'this.form.requestSubmit()', value: params[:query_text]  %>
