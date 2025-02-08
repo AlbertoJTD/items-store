@@ -55,6 +55,9 @@ gem 'pagy', '~> 6.0'
 # Debug app
 gem 'pry', '~> 0.14.2'
 
+# Add components
+gem "view_component", "~> 3.21"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

@@ -10,7 +10,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 12
-    assert_select '.category', 10
+    assert_select '.category', 10 + 1 # It's added one more category for 'all'
   end
 
   test 'should get products by category' do
