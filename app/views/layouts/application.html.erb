@@ -16,6 +16,8 @@
       <%= render 'shared/header' %>
       <%= render 'shared/notification' %>
       <%= yield %>
+
+      <%= turbo_frame_tag :modal %>
     </main>
   </body>
 </html>
