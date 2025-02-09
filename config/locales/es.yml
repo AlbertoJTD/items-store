@@ -104,3 +104,7 @@ es:
         failed: Inicio de sesión inválido
       destroy:
         destroyed: Sesión finalizada, espero verte pronto :)
+  user_mailer:
+    welcome:
+      subject: Bienvenido a Items Store
+      welcome_message: 'Hola %{username}, Bienvenido a Items Store, Esperamos que vendas y compres muchos productos'

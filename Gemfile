@@ -69,6 +69,7 @@ group :development, :test do
   gem 'annotate' # Generate comments at the top of models of its structure, etc.
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rubocop'
+  gem "letter_opener", "~> 1.10"
 end
 
 group :development do
