@@ -64,6 +64,9 @@ gem "sidekiq", "~> 7.3"
 gem "redis", "~> 5.3"
 gem "hiredis", "~> 0.6.3"
 
+# AWS bucket
+gem "aws-sdk-s3"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
