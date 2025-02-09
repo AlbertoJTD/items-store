@@ -61,6 +61,9 @@ gem "view_component", "~> 3.21"
 # Background jobs
 gem "sidekiq", "~> 7.3"
 
+gem "redis", "~> 5.3"
+gem "hiredis", "~> 0.6.3"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
