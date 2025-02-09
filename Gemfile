@@ -58,6 +58,9 @@ gem 'pry', '~> 0.14.2'
 # Add components
 gem "view_component", "~> 3.21"
 
+# Background jobs
+gem "sidekiq", "~> 7.3"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
